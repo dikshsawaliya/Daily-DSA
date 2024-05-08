@@ -5,9 +5,14 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        int[] arrayList   = {1,2,3,4,5};
-        System.out.println(arrayList);
-        int ans =  linearSearch(arrayList, 4);
+//        int[] arrayList   = {1,2,3,4,5};
+//        System.out.println(arrayList);
+//        int ans =  linearSearch(arrayList, 4);
+//        System.out.println(ans);
+
+        String name = "Diksh";
+        char target = 'D';
+        Boolean ans = linearSearchInChar(name, target);
         System.out.println(ans);
     }
 
@@ -22,5 +27,15 @@ public class Main {
             }
         }
         return -1;
+    }
+
+    static Boolean linearSearchInChar(String name, char target){
+        for (int i=0; i< name.length(); i++){
+            char Character = name.charAt(i);
+            if (Character == target){
+                return true;
+            }
+        }
+        return false;
     }
 }
