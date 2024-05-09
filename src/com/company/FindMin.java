@@ -8,9 +8,10 @@ public class FindMin {
     }
 
     static int FindMin(int[] numArray){
-        int element = numArray[0];
-        for (int i=0; i< numArray.length; i++){
-            if (numArray[i] < element){
+        int element = numArray[0]; // Initialised an int element with the first index of the array
+        for (int i=1; i< numArray.length; i++){
+            if (numArray[i] < element){     //Then iterating the loop from the second index
+                                            // and checking whether the element is smaller than the next number in array
                 element = numArray[i];
             }
         }
