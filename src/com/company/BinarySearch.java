@@ -5,25 +5,36 @@ public class BinarySearch {
     public static void main(String[] args) {
 
         int [] arr = {1,2,3,4,5,6,8,32,36,54,133};
-        int target = 1;
-        System.out.println(binarySearch(arr, target));
+        int [] descArray = {77,66,55,44,33,22,11};
+        int target = 44;
+        System.out.println(binarySearch(descArray, target));
     }
 
     static int binarySearch(int []arr, int target){
 
         int start = 0;
         int end = arr.length -1;
+        boolean asc = arr[start] < arr[end];
 
         while(start <=end){
 
             int mid = start +(end -start)/2;
-
-            if (target < arr[mid]){
-                end = mid -1;
-            }else if (target > arr[mid]){
-                start = mid +1;
+            if (asc){
+                if (target < arr[mid]){
+                    end = mid -1;
+                }else if (target > arr[mid]){
+                    start = mid +1;
+                }else {
+                    return mid;
+                }
             }else {
-                return mid;
+                if (target > arr[mid]){
+                    end = mid -1;
+                }else if (target < arr[mid]){
+                    start = mid +1;
+                }else {
+                    return mid;
+                }
             }
         }
         return -1;
