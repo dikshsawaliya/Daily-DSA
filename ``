@@ -1,0 +1,83 @@
+[33mcommit 0ca723f595987eacb347fe7d0d8b420e9150384e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Wed Jul 24 00:40:48 2024 +0530
+
+    Reverse using recursive
+
+[33mcommit b80af973f3584ecc49b5bc046b448ba662f46e0e[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Tue Jul 23 01:19:33 2024 +0530
+
+    Recursive problems added
+
+[33mcommit 9fd40288d3087aa6d57848b5c4d30e78bdb3ce08[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Tue Jul 16 01:58:30 2024 +0530
+
+    Added the Recursive programs
+
+[33mcommit dbbdfd49bcefe2c0075766fffc016d0a98a22504[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Mon May 20 07:33:55 2024 +0530
+
+    Added the Ascending and Descending check at the Array in Binary Search
+
+[33mcommit 149d1391b46e83ad3ef881c95d0452be00bf8e0f[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Mon May 20 07:19:53 2024 +0530
+
+    Binary Search added
+
+[33mcommit a4f28c24d4780fe404c4000377c57563dc2e0dbd[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Mon May 13 23:53:36 2024 +0530
+
+    Even number of digits in a number using Log 10.
+
+[33mcommit 12d50d2f9749e015aa38b6fbfd7ad04d20404eae[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Mon May 13 23:47:08 2024 +0530
+
+    Even number of digits in a number using String count.
+
+[33mcommit 91735b5ba78b6465bc16f33e5dffa9d986de0866[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Fri May 10 00:50:02 2024 +0530
+
+    Find min and max in 2D Array
+
+[33mcommit a724925d90bec2bb2af980dc7860f24c772307e7[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Fri May 10 00:42:31 2024 +0530
+
+    Search in 2D array with a target number
+
+[33mcommit 1d674a22b38bbe3afb68ce32064bf6310e74d12e[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Fri May 10 00:23:08 2024 +0530
+
+    FInd Minimum number added the comments
+
+[33mcommit 87b55359c748e4585665a4c3dbf4ca3c2932492e[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Fri May 10 00:17:54 2024 +0530
+
+    FInd Minimum number in the given array
+
+[33mcommit dfa9859568d2c0076176db2113328bf7ca747f07[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Thu May 9 02:26:46 2024 +0530
+
+    Search in range class added
+
+[33mcommit 9b45d04b88c3d0f61cafe5da05b94798d4874d8f[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Thu May 9 02:15:20 2024 +0530
+
+    Updated the Linear Search code for String from Integer Array
+
+[33mcommit 57c311450829c714bad95a55144da157b786c252[m
+Author: Diksh Sawaliya <80209884+dikshsawaliya@users.noreply.github.com>
+Date:   Thu May 9 02:05:23 2024 +0530
+
+    Initial Commit
