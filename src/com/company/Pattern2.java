@@ -1,6 +1,6 @@
 package com.company;
 
-public class Patter2 {
+public class Pattern2 {
     
     // * * *
     // * * *
