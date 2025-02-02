@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Pattern;
 
 public class Pattern3 {
     
@@ -14,8 +14,8 @@ public class Pattern3 {
         //for every row that is printing 
         for(int row = 1; row <= n; row ++){
             //column will be printing inversely
-            for(int col = 1; col <= n-row; col++){
-                System.out.print("*");
+            for(int col = 1; col <= n-row +1; col++){
+                System.out.print("* ");
             }
             System.out.println();
         }
