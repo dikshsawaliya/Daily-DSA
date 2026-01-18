@@ -3,35 +3,101 @@ package com.company;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.IntToDoubleFunction;
 
 public class Playground {
 
     public static void main(String[] args) {
-//        LinkedList linkedList = new LinkedList();
-//        linkedList.insertFirst(3);
-//        linkedList.insertFirst(4);
-//        linkedList.insertFirst(5);
-//        linkedList.insertLast(10);
-//        linkedList.display();
 
-//        Map <String, Integer> recipe = new HashMap<>();
-//        recipe.put("flour", 500 );
-//        recipe.put("sugar", 200 );
-//        recipe.put("eggs", 800 );
-//
-//        Map <String, Integer> available = new HashMap<>();
-//        available.put("sugar", 200 );
-//        available.put("eggs", 800 );
-//        available.put("flour", 500 );
-//
-//        System.out.println(cakes(recipe, available));
+//        String haystack = "WWELEETCODE";
+//        String needle = "LEET";
+//        System.out.println(strStr(haystack, needle));
+
+//        printNumbers(5);
+//        System.out.println(sumFirstNumbers(3));
+        System.out.println(factorialRecursion(5));
+    }
 
 
-        System.out.println(octopus("    "));
-        System.out.println(octopusString("    "));
+    static void countDigits(int n){
 
-// must return 0
+        if()
+    }
 
+
+    static int factorialRecursion(int n){
+
+        if (n < 2){
+            return n;
+        }
+
+        return Math.multiplyExact(n, factorialRecursion(n-1));
+    }
+
+    static int sumFirstNumbers(int n){
+        if(n ==0){
+            return n;
+        }
+        return n + sumFirstNumbers(n-1);
+    }
+
+
+    static void printNumbers(int n){
+        if(n == 0){
+            return ;
+        }
+        printNumbers(n-1);
+        System.out.println(n);
+    }
+
+    public static int strStr(String haystack, String needle) {
+
+        for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
+            if(haystack.startsWith(needle, i)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
+    public static int removeElement(int [] nums, int val){
+
+        //1,2,3,4,5
+
+        int [] arr = new int [nums.length];
+
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i] == val){
+                arr[i] = 99;
+            }else{
+                arr[i] = nums[i];
+                System.out.println(nums[i]);
+            }
+
+        }
+        return arr.length;
+    }
+
+
+
+    public static int multiplesSum(int number){
+
+        int sum =0;
+
+        for (int i = 1; i < number; i++) {
+            if(i % 3 == 0 ) {
+                sum+=i;
+                System.out.println("3 ->" + i);
+            }
+            else if(i % 5 ==0){
+                sum+=i;
+                System.out.println("5 ->" + i);
+            }
+        }
+
+        return sum;
     }
 
     public static Map<Character, Integer> octopus(String sentence){
