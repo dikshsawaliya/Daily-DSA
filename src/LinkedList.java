@@ -16,9 +16,11 @@ public class LinkedList {
 
     static void printNode(Node node){
         if(node == null){
+            System.out.println("null");
             return;
         }
-        System.out.println(node.data);
+        System.out.print(node.data);
+        System.out.print("->");
         printNode(node.next);
     }
 
