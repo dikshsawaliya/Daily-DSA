@@ -11,13 +11,43 @@ public class LinkedList {
         first.next = second;
         second.next = third;
 
-        inserAtEnd(4, third);
-        first = addInBegining(0, first);
+        insertAtEnd(4, third);
+        first = addInBeginning(0, first);
+
+        addInBetween(second, third, 6);
         printNode(first);
+        deleteNode(first, 3);
+        printNode(first);
+
+//        System.out.println(findNode(first, 2));
 
     }
 
-    static Node addInBegining(int data, Node head){
+    static void deleteNode(Node head, int deletionData){
+        while (head != null){
+            if(head.data == deletionData){
+                head.data = head.next.data;
+                head = head.next;
+            }
+            head = head.next;
+        }
+    }
+
+    static int findNode(Node head, int searchData){
+        int count =0;
+
+        while(head != null){
+            if(head.data == searchData){
+                return count;
+            }
+            count++;
+            head = head.next;
+        }
+        return count;
+    }
+
+
+    static Node addInBeginning(int data, Node head){
 
         Node node = new Node(data);
         node.next = head;
@@ -25,7 +55,7 @@ public class LinkedList {
     }
 
 
-    static Node inserAtEnd(int data, Node head){
+    static Node insertAtEnd(int data, Node head){
 
         Node node = new Node(data);
 
@@ -39,14 +69,12 @@ public class LinkedList {
     }
 
 
-    // static void addInBetween(Node node, int newData){
+     static void addInBetween(Node beforeNode,Node afterNode,  int newData){
 
-    //     int temp;
-    //     temp = node.next.data;
-    //     node.next.data = newData;
-    //     node.next
-
-    // }
+       Node newNode = new Node(newData);
+       beforeNode.next = newNode;
+       newNode.next  = afterNode;
+     }
 
 
     static void printNode(Node node){
@@ -61,12 +89,12 @@ public class LinkedList {
 
 }
 
-class Node {
-    int data;
-    Node next;
+    class Node {
+        int data;
+        Node next;
 
-    Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
 }
