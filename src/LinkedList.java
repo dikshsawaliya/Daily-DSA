@@ -23,14 +23,26 @@ public class LinkedList {
 
     }
 
-    static void deleteNode(Node head, int deletionData){
-        while (head != null){
-            if(head.data == deletionData){
-                head.data = head.next.data;
-                head = head.next;
-            }
-            head = head.next;
+    static Node deleteNode(Node head, int deletionData){
+
+        if( head == null){
+            return null;
         }
+
+        if(head.data == deletionData){
+            return head.next;
+        }
+        Node current = head;
+
+        while (current.next != null){
+            if(current.next.data == deletionData){
+                current.next = current.next.next;
+                break;
+            }
+            current = current.next;
+        }
+
+        return head;
     }
 
     static int findNode(Node head, int searchData){
