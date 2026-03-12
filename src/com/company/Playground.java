@@ -2,6 +2,7 @@ package com.company;
 
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.IntToDoubleFunction;
 
@@ -15,13 +16,69 @@ public class Playground {
 
 //        printNumbers(5);
 //        System.out.println(sumFirstNumbers(3));
-        System.out.println(factorialRecursion(5));
+//        System.out.println(sumFirstNaturalNumber(5));
+         int [][] arr = {
+                 {1, 1},
+                 {3, 2},
+                 {2, 3}
+         };
+        int [][] arr2 = {
+                {2, 1},
+                {3, 2},
+                {1, 3}
+        };
+
+        mergeSimilarItems(arr, arr2);
     }
 
+    static  void mergeSimilarItems(int[][] items1, int[][] items2) {
 
-    static void countDigits(int n){
+        Map <Integer, Integer> map = new HashMap();
+        for (int i = 0; i <items1.length; i++) {
+            for (int j = 0; j < items1[i].length -1; j++) {
+                map.put(items1[i][j], items1[i][j+1]);
+            }
+        }
 
-        if()
+        Map <Integer, Integer> map2 = new HashMap();
+        for (int i = 0; i < items2.length; i++) {
+            for (int j = 0; j < items2[i].length -1; j++) {
+                map2.put(items2[i][j], items2[i][j+1]);
+            }
+        }
+
+        for (int i = 0; i < map.size(); i++) {
+            if(map.containsValue(map2.get(i))){
+                System.out.println(map.get(map2.get(i)));
+            }
+        }
+
+        System.out.println(map);
+        System.out.println(map2);
+//        for (int i = 0; i <items1.length; i++) {
+//            for (int j = 0; j < items2.length; j++) {
+//                for (int k = 0; k <items1[i].length; k++) {
+//                    for (int l = 0; l < items2[i].length; l++) {
+//                        if (items1[i][j] == items2[i][j]){
+//                            System.out.print(items1[i][j] + " matched ");
+//                        }
+//                    }
+//                }
+//
+//
+//            }
+//        }
+
+
+    }
+
+    //1
+    static int sumFirstNaturalNumber(int n){
+
+        if(n < 1){
+            return n;
+        }
+        return n + sumFirstNumbers(n-1);
     }
 
 
