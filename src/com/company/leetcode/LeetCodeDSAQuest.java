@@ -2,11 +2,13 @@ package com.company.leetcode;
 
 import java.util.Arrays;
 
-public class Concatenate {
+public class LeetCodeDSAQuest {
 
     public static void main(String[] args) {
-        int [] arr = {1,2,1};
-        System.out.println(Arrays.toString(concatenate(arr)));
+        int [] arr = {1,1,0,1,1,1};
+//        System.out.println(Arrays.toString(concatenate(arr)));
+//        System.out.println(Arrays.toString(shuffle(arr, 3)));
+        System.out.println(findMaxConsecutiveOnes(arr));
     }
 
     static int [] concatenate(int [] arr){
@@ -20,4 +22,31 @@ public class Concatenate {
         return newArr;
     }
 
+    static int[] shuffle(int[] nums, int n) {
+
+        // 2 5 1 3 4 7
+        int [] newArr = new int [nums.length];
+        for (int i = 0; i < n; i++) {
+            newArr[ i * 2] = nums[i];
+            newArr[i*2 +1] = nums[i+n];
+        }
+
+        return newArr;
+    }
+
+    static int findMaxConsecutiveOnes(int[] nums) {
+        int countMax = 0;
+        int count = 0;
+        for (int i = 0; i < nums.length -1; i++) {
+            if(nums[i + 1] == 1 && nums[i] == 1){
+                count++;
+            }else{
+                if(countMax < count) {
+                    countMax = count;
+                }
+                count =0;
+            }
+        }
+        return countMax;
+    }
 }
