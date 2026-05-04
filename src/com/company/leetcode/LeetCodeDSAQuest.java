@@ -5,10 +5,11 @@ import java.util.Arrays;
 public class LeetCodeDSAQuest {
 
     public static void main(String[] args) {
-        int [] arr = {1,1,0,1,1,1};
+        int [] arr = {2,2};
 //        System.out.println(Arrays.toString(concatenate(arr)));
 //        System.out.println(Arrays.toString(shuffle(arr, 3)));
-        System.out.println(findMaxConsecutiveOnes(arr));
+//        System.out.println(findMaxConsecutiveOnes(arr));
+        System.out.println(Arrays.toString(findErrorNums(arr)));
     }
 
     static int [] concatenate(int [] arr){
@@ -52,5 +53,23 @@ public class LeetCodeDSAQuest {
         }else {
             return count;
         }
+    }
+
+    static int[] findErrorNums(int[] nums) {
+
+        int [] newArr = new int [2];
+
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] != i +1){
+                if(i ==0){
+                    newArr[0] = nums[i] -1;
+                    newArr[1] = nums[i];
+                }else {
+                    newArr[0] = nums[i - 1];
+                    newArr[1] = nums[i] + 1;
+                }}
+        }
+        return newArr;
+
     }
 }
