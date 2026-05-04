@@ -37,8 +37,8 @@ public class LeetCodeDSAQuest {
     static int findMaxConsecutiveOnes(int[] nums) {
         int countMax = 0;
         int count = 0;
-        for (int i = 0; i < nums.length -1; i++) {
-            if(nums[i + 1] == 1 && nums[i] == 1){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1){
                 count++;
             }else{
                 if(countMax < count) {
@@ -47,6 +47,10 @@ public class LeetCodeDSAQuest {
                 count =0;
             }
         }
-        return countMax;
+        if(countMax > count){
+            return countMax;
+        }else {
+            return count;
+        }
     }
 }
