@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class LeetCodeDSAQuest {
 
     public static void main(String[] args) {
-        int [] arr = {2,2};
+        int [] arr = {8,1,2,2,3};
 //        System.out.println(Arrays.toString(concatenate(arr)));
 //        System.out.println(Arrays.toString(shuffle(arr, 3)));
 //        System.out.println(findMaxConsecutiveOnes(arr));
-        System.out.println(Arrays.toString(findErrorNums(arr)));
+        System.out.println(Arrays.toString(smallerNumbersThanCurrent(arr)));
     }
 
     static int [] concatenate(int [] arr){
@@ -72,4 +72,22 @@ public class LeetCodeDSAQuest {
         return newArr;
 
     }
+
+    static int[] smallerNumbersThanCurrent(int[] nums) {
+        int [] newArr = new int[nums.length];
+        int count;
+
+        for (int i = 0; i < nums.length; i++) {
+            count = 0;
+            for (int j = 0; j < nums.length; j++) {
+                if (nums[i] > nums[j]){
+                    count++;
+                }
+                newArr[i] = count;
+            }
+        }
+        return newArr;
+    }
+
+
 }
