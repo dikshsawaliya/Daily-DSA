@@ -4,7 +4,38 @@ public class StriverPatterns {
 
     public static void main(String[] args) {
 //        boxStars(5);
-        stairAscendingNum(5);
+//        stairAscendingNum(5);
+        stairsDescendingNum(5);
+    }
+
+
+    static void pyramid(int n ){
+        for (int i = 0; i < n; i++) {
+            int half = n/2;
+            for (int j = 0; j < half; j++) {
+                System.out.print("");
+            }
+            System.out.print("*");
+        }
+    }
+
+
+    static void stairsDescendingNum(int n ){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n -i; j++) {
+                System.out.print(j+1);
+            }
+            System.out.println();
+        }
+    }
+
+    static void stairsDescending(int n ){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n -i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     static void boxStars(int n ){
@@ -29,9 +60,10 @@ public class StriverPatterns {
     static void stairAscendingNum( int n ){
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < i + 1; j++) {
-                System.out.print(j+1);
+                System.out.print(i+1);
             }
             System.out.println();
         }
     }
+
 }
