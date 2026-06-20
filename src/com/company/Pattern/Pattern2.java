@@ -6,11 +6,10 @@ public class Pattern2 {
     // * * *
     // * * *
 
+
     static void pattern2(int n){
-            //for every row is running n times
-        for (int row = 1; row <= n; row++) {
-            //for every col is running n times
-            for (int col = 1; col <= n; col ++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 System.out.print("* ");
             }
             System.out.println();
